@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DEV0102Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tabUsuario">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="300" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="cep" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="endereco" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+    <Property Name="bairro" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="cidade" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="uf" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+    <Property Name="senha" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="nomeFoto" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DEV0102Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" />
+  </EntityContainer>
+</Schema>
