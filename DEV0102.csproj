@@ -126,6 +126,7 @@
     <Compile Include="tabUsuario.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Suporte.cs" />
     <Compile Include="Web References\wsCorreiros\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

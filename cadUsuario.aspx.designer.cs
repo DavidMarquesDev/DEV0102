@@ -132,12 +132,30 @@ namespace DEV0102
         protected global::System.Web.UI.WebControls.Button btnVoltar;
 
         /// <summary>
-        /// GridView1 control.
+        /// GridUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView GridUsuario;
+
+        /// <summary>
+        /// SqlDataSourceUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceUsuario;
+
+        /// <summary>
+        /// HiddenFieldCodigo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField HiddenFieldCodigo;
     }
 }
