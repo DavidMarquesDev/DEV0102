@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DEV0102ModelStoreContainer" CdmEntityContainer="DEV0102Entities">
+  <EntityContainerMapping StorageEntityContainer="DEV0102ModelStoreContainer" CdmEntityContainer="DEV0102Entities1">
     <EntitySetMapping Name="tabUsuario">
       <EntityTypeMapping TypeName="DEV0102Model.tabUsuario">
         <MappingFragment StoreEntitySet="tabUsuario">
@@ -14,6 +14,11 @@
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="senha" ColumnName="senha" />
           <ScalarProperty Name="nomeFoto" ColumnName="nomeFoto" />
+          <ScalarProperty Name="cpfCnpj" ColumnName="cpfCnpj" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="pessoa" ColumnName="pessoa" />
+          <ScalarProperty Name="DataFundacao" ColumnName="DataFundacao" />
+          <ScalarProperty Name="razaoSocial" ColumnName="razaoSocial" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

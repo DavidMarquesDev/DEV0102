@@ -24,5 +24,10 @@ namespace DEV0102
         public string email { get; set; }
         public string senha { get; set; }
         public string nomeFoto { get; set; }
+        public string cpfCnpj { get; set; }
+        public string telefone { get; set; }
+        public string pessoa { get; set; }
+        public DateTime DataFundacao { get; set; }
+        public string razaoSocial { get; set; }
     }
 }

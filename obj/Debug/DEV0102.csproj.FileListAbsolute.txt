@@ -1,3 +1,5 @@
+G:\Desenvolvimento\GitHub\DEV0102\obj\Debug\DEV0102.csproj.CoreCompileInputs.cache
+G:\Desenvolvimento\GitHub\DEV0102\obj\Debug\DEV0102.csprojAssemblyReference.cache
 G:\Desenvolvimento\GitHub\DEV0102\bin\DEV0102.dll.config
 G:\Desenvolvimento\GitHub\DEV0102\bin\DEV0102.dll
 G:\Desenvolvimento\GitHub\DEV0102\bin\DEV0102.pdb
@@ -56,8 +58,6 @@ G:\Desenvolvimento\GitHub\DEV0102\bin\Microsoft.CodeDom.Providers.DotNetCompiler
 G:\Desenvolvimento\GitHub\DEV0102\bin\EntityFramework.xml
 G:\Desenvolvimento\GitHub\DEV0102\bin\EntityFramework.SqlServer.xml
 G:\Desenvolvimento\GitHub\DEV0102\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-G:\Desenvolvimento\GitHub\DEV0102\obj\Debug\DEV0102.csprojAssemblyReference.cache
-G:\Desenvolvimento\GitHub\DEV0102\obj\Debug\DEV0102.csproj.CoreCompileInputs.cache
 G:\Desenvolvimento\GitHub\DEV0102\obj\Debug\DEV0102.csproj.CopyComplete
 G:\Desenvolvimento\GitHub\DEV0102\obj\Debug\DEV0102.dll
 G:\Desenvolvimento\GitHub\DEV0102\obj\Debug\DEV0102.pdb

@@ -8,7 +8,7 @@ namespace DEV0102.DAL
     {
         public tabUsuario consultarUsuarioPorEmail(string email)
         {
-            using (DEV0102Entities ctx = new DEV0102Entities())
+            using (DEV0102Entities1 ctx = new DEV0102Entities1())
             {
                 return ctx.tabUsuario.Where(c => c.email == email).FirstOrDefault();
             }
@@ -16,7 +16,7 @@ namespace DEV0102.DAL
 
         public void cadastrarUsuario(tabUsuario objU)
         {
-            using (DEV0102Entities ctx = new DEV0102Entities())
+            using (DEV0102Entities1 ctx = new DEV0102Entities1())
             {
                 ctx.tabUsuario.Add(objU);
                 ctx.SaveChanges();
@@ -25,7 +25,7 @@ namespace DEV0102.DAL
 
         public void editarUsuario(tabUsuario objU)
         {
-            using (DEV0102Entities ctx = new DEV0102Entities())
+            using (DEV0102Entities1 ctx = new DEV0102Entities1())
             {
                 ctx.tabUsuario.Attach(objU);
                 ctx.Entry(objU).State = System.Data.Entity.EntityState.Modified;
@@ -35,7 +35,7 @@ namespace DEV0102.DAL
 
         public void deletarUsuario(int codigo)
         {
-            using (DEV0102Entities ctx = new DEV0102Entities())
+            using (DEV0102Entities1 ctx = new DEV0102Entities1())
             {
                 // Verifica se o usuário existe no banco de dados
                 var usuarioParaDeletar = ctx.tabUsuario.Find(codigo);
@@ -52,7 +52,7 @@ namespace DEV0102.DAL
 
         public tabUsuario consultarUsuarioPorCodigo(int usuarioCodigo)
         {
-            using (DEV0102Entities ctx = new DEV0102Entities())
+            using (DEV0102Entities1 ctx = new DEV0102Entities1())
             {
                 tabUsuario obj = ctx.tabUsuario.Where(c => c.codigo == usuarioCodigo).FirstOrDefault();
                 return obj;

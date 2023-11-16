@@ -75,27 +75,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cadUsuario.aspx" />
+    <Content Include="MasterPages\Site.master.aspx" />
+    <Content Include="Pages\Usuarios\cadUsuario.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Script\cadUsuario\validaCEP.js" />
+    <Content Include="Script\Validacoes\validaCnpj.js" />
+    <Content Include="Script\Validacoes\validaPessoa.js" />
+    <Content Include="Script\Validacoes\validaTel.js" />
+    <Content Include="Script\Validacoes\validaCpf.js" />
+    <Content Include="Script\Validacoes\validaCEP.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cadUsuario.aspx.cs">
+    <Compile Include="MasterPages\Site.master.aspx.cs">
+      <DependentUpon>Site.master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Site.master.aspx.designer.cs">
+      <DependentUpon>Site.master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Usuarios\cadUsuario.aspx.cs">
       <DependentUpon>cadUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cadUsuario.aspx.designer.cs">
+    <Compile Include="Pages\Usuarios\cadUsuario.aspx.designer.cs">
       <DependentUpon>cadUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\usuarioDAL.cs" />

@@ -2,6 +2,7 @@
 using DEV0102.Utils;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,6 +31,23 @@ namespace DEV0102
                 objusuario.uf = txtUf.Text;
                 objusuario.email = txtEmail.Text;
                 objusuario.senha = txtSenha.Text;
+
+                objusuario.pessoa = ddlPessoaFJ.SelectedValue;
+
+                if (objusuario.pessoa == "Física")
+                {
+                    objusuario.cpfCnpj = txtCpf.Text;
+                }
+                else
+                {
+                    objusuario.cpfCnpj = txtCnpj.Text;
+                }
+
+                objusuario.telefone = txtTelefone.Text;
+                DateTime dataFundacao = DateTime.ParseExact(txtDtNasc.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                txtDtNasc.Text = dataFundacao.ToString("dd/MM/yyyy");
+                objusuario.DataFundacao = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                objusuario.razaoSocial = txtRazao.Text;
 
                 if (fupFoto.HasFile)
                 {
@@ -121,6 +139,12 @@ namespace DEV0102
             txtUf.Text = string.Empty;
             txtEmail.Text = string.Empty;
             txtSenha.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtCnpj.Text = string.Empty;
+            txtTelefone.Text = string.Empty;
+            ddlPessoaFJ.SelectedValue = string.Empty;
+            txtDtNasc.Text = string.Empty;
+            txtRazao.Text = string.Empty;
 
             // Limpar ou reinicializar outros campos conforme necessário
         }
@@ -172,6 +196,12 @@ namespace DEV0102
                 txtCidade.Text = obj.cidade;
                 txtUf.Text = obj.uf;
                 txtEmail.Text = obj.email;
+                txtCpf.Text = obj.cpfCnpj;
+                txtCnpj.Text = obj.cpfCnpj;
+                txtTelefone.Text = obj.telefone;
+                ddlPessoaFJ.SelectedValue = obj.pessoa;
+                txtDtNasc.Text = obj.DataFundacao.ToString("yyyy-MM-dd");
+                txtRazao.Text = obj.razaoSocial;
 
                 HiddenFieldCodigo.Value = obj.codigo.ToString();
                 btnCadastrar.Text = "Salvar";

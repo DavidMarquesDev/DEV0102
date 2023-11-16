@@ -13,10 +13,10 @@ namespace DEV0102
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DEV0102Entities : DbContext
+    public partial class DEV0102Entities1 : DbContext
     {
-        public DEV0102Entities()
-            : base("name=DEV0102Entities")
+        public DEV0102Entities1()
+            : base("name=DEV0102Entities1")
         {
         }
     

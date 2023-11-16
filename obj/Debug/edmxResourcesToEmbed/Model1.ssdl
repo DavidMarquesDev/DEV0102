@@ -5,15 +5,20 @@
       <PropertyRef Name="codigo" />
     </Key>
     <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nome" Type="nchar" MaxLength="300" Nullable="false" />
-    <Property Name="cep" Type="nchar" MaxLength="10" Nullable="false" />
-    <Property Name="endereco" Type="nchar" MaxLength="300" />
-    <Property Name="bairro" Type="nchar" MaxLength="100" />
-    <Property Name="cidade" Type="nchar" MaxLength="100" />
-    <Property Name="uf" Type="nchar" MaxLength="2" />
-    <Property Name="email" Type="nchar" MaxLength="300" />
-    <Property Name="senha" Type="nchar" MaxLength="100" />
-    <Property Name="nomeFoto" Type="nchar" MaxLength="300" />
+    <Property Name="nome" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="cep" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="endereco" Type="nvarchar" MaxLength="300" />
+    <Property Name="bairro" Type="nvarchar" MaxLength="100" />
+    <Property Name="cidade" Type="nvarchar" MaxLength="100" />
+    <Property Name="uf" Type="nvarchar" MaxLength="2" />
+    <Property Name="email" Type="nvarchar" MaxLength="300" />
+    <Property Name="senha" Type="nvarchar" MaxLength="100" />
+    <Property Name="nomeFoto" Type="nvarchar" MaxLength="300" />
+    <Property Name="cpfCnpj" Type="nvarchar" MaxLength="20" />
+    <Property Name="telefone" Type="nvarchar" MaxLength="15" />
+    <Property Name="pessoa" Type="nvarchar" MaxLength="10" />
+    <Property Name="DataFundacao" Type="date" Nullable="false" />
+    <Property Name="razaoSocial" Type="nvarchar" MaxLength="300" />
   </EntityType>
   <EntityContainer Name="DEV0102ModelStoreContainer">
     <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" Schema="dbo" store:Type="Tables" />

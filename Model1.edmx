@@ -10,15 +10,20 @@
             <PropertyRef Name="codigo" />
           </Key>
           <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nome" Type="nchar" MaxLength="300" Nullable="false" />
-          <Property Name="cep" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="endereco" Type="nchar" MaxLength="300" />
-          <Property Name="bairro" Type="nchar" MaxLength="100" />
-          <Property Name="cidade" Type="nchar" MaxLength="100" />
-          <Property Name="uf" Type="nchar" MaxLength="2" />
-          <Property Name="email" Type="nchar" MaxLength="300" />
-          <Property Name="senha" Type="nchar" MaxLength="100" />
-          <Property Name="nomeFoto" Type="nchar" MaxLength="300" />
+          <Property Name="nome" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="cep" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="endereco" Type="nvarchar" MaxLength="300" />
+          <Property Name="bairro" Type="nvarchar" MaxLength="100" />
+          <Property Name="cidade" Type="nvarchar" MaxLength="100" />
+          <Property Name="uf" Type="nvarchar" MaxLength="2" />
+          <Property Name="email" Type="nvarchar" MaxLength="300" />
+          <Property Name="senha" Type="nvarchar" MaxLength="100" />
+          <Property Name="nomeFoto" Type="nvarchar" MaxLength="300" />
+          <Property Name="cpfCnpj" Type="nvarchar" MaxLength="20" />
+          <Property Name="telefone" Type="nvarchar" MaxLength="15" />
+          <Property Name="pessoa" Type="nvarchar" MaxLength="10" />
+          <Property Name="DataFundacao" Type="date" Nullable="false" />
+          <Property Name="razaoSocial" Type="nvarchar" MaxLength="300" />
         </EntityType>
         <EntityContainer Name="DEV0102ModelStoreContainer">
           <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" Schema="dbo" store:Type="Tables" />
@@ -33,17 +38,22 @@
             <PropertyRef Name="codigo" />
           </Key>
           <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nome" Type="String" MaxLength="300" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="cep" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="endereco" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
-          <Property Name="bairro" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-          <Property Name="cidade" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-          <Property Name="uf" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
-          <Property Name="senha" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-          <Property Name="nomeFoto" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="nome" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cep" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="endereco" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="bairro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="cidade" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="uf" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="senha" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="nomeFoto" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="cpfCnpj" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="pessoa" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DataFundacao" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="razaoSocial" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="DEV0102Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DEV0102Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" />
         </EntityContainer>
       </Schema>
@@ -51,7 +61,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DEV0102ModelStoreContainer" CdmEntityContainer="DEV0102Entities">
+        <EntityContainerMapping StorageEntityContainer="DEV0102ModelStoreContainer" CdmEntityContainer="DEV0102Entities1">
           <EntitySetMapping Name="tabUsuario">
             <EntityTypeMapping TypeName="DEV0102Model.tabUsuario">
               <MappingFragment StoreEntitySet="tabUsuario">
@@ -65,6 +75,11 @@
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="senha" ColumnName="senha" />
                 <ScalarProperty Name="nomeFoto" ColumnName="nomeFoto" />
+                <ScalarProperty Name="cpfCnpj" ColumnName="cpfCnpj" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="pessoa" ColumnName="pessoa" />
+                <ScalarProperty Name="DataFundacao" ColumnName="DataFundacao" />
+                <ScalarProperty Name="razaoSocial" ColumnName="razaoSocial" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
